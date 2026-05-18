@@ -1,2 +1,2 @@
-# healthytantra-website
+# healthytantra
 Official website for Healthy Tantra.
