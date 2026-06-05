@@ -1838,3 +1838,222 @@ a {
 textarea {
   resize: vertical;
 }
+/* ── Policy Page Styles ── */
+.policy-hero {
+  background: linear-gradient(135deg, #f0faf6 0%, #e6f4ee 100%);
+  padding: 56px 0 40px;
+  border-bottom: 1px solid #d4eadd;
+}
+.policy-hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a3d2b;
+  margin-bottom: 8px;
+}
+.policy-hero .meta {
+  font-size: 0.875rem;
+  color: #5a7a68;
+}
+.policy-hero .meta span { margin-right: 20px; }
+
+.policy-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+/* Table of Contents */
+.policy-toc {
+  background: #f7fbf9;
+  border: 1px solid #d4eadd;
+  border-radius: 10px;
+  padding: 24px 28px;
+  margin-bottom: 48px;
+}
+.policy-toc h2 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #3a7a5a;
+  margin-bottom: 14px;
+}
+.policy-toc ol {
+  margin: 0;
+  padding-left: 20px;
+  columns: 2;
+  column-gap: 32px;
+}
+.policy-toc li {
+  font-size: 0.875rem;
+  margin-bottom: 7px;
+  break-inside: avoid;
+}
+.policy-toc a {
+  color: #2d6e4e;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.policy-toc a:hover { color: #1a3d2b; text-decoration: underline; }
+@media (max-width: 600px) {
+  .policy-toc ol { columns: 1; }
+}
+
+/* Sections */
+.policy-section {
+  margin-bottom: 48px;
+  scroll-margin-top: 80px;
+}
+.policy-section h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a3d2b;
+  border-bottom: 2px solid #d4eadd;
+  padding-bottom: 10px;
+  margin-bottom: 18px;
+}
+.policy-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d5a3f;
+  margin: 22px 0 10px;
+}
+.policy-section h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #3a7a5a;
+  margin: 18px 0 8px;
+}
+.policy-section p {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: #374151;
+  margin-bottom: 12px;
+}
+.policy-section ul,
+.policy-section ol {
+  padding-left: 22px;
+  margin-bottom: 14px;
+}
+.policy-section li {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+/* Callout Boxes */
+.callout {
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+.callout-important {
+  background: #fff8e6;
+  border-left: 4px solid #f59e0b;
+  color: #78350f;
+}
+.callout-info {
+  background: #eff8f3;
+  border-left: 4px solid #34a86a;
+  color: #1a3d2b;
+}
+.callout-warning {
+  background: #fef2f2;
+  border-left: 4px solid #ef4444;
+  color: #7f1d1d;
+}
+.callout strong { font-weight: 600; }
+
+/* Data Tables */
+.data-table-wrap {
+  overflow-x: auto;
+  margin: 18px 0;
+  border-radius: 8px;
+  border: 1px solid #d4eadd;
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.data-table thead { background: #e6f4ee; }
+.data-table th {
+  text-align: left;
+  padding: 11px 16px;
+  font-weight: 600;
+  color: #1a3d2b;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid #d4eadd;
+}
+.data-table td {
+  padding: 11px 16px;
+  color: #374151;
+  border-bottom: 1px solid #edf5f0;
+  vertical-align: top;
+  line-height: 1.6;
+}
+.data-table tr:last-child td { border-bottom: none; }
+.data-table tr:nth-child(even) td { background: #f7fbf9; }
+
+/* Navigation Path Badges */
+.path-badge {
+  display: inline-block;
+  background: #e6f4ee;
+  border: 1px solid #b2d8c2;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-family: 'Courier New', monospace;
+  padding: 3px 8px;
+  color: #1a5c36;
+  margin: 2px 0;
+}
+
+/* URL Box */
+.url-box {
+  background: #f0faf6;
+  border: 1px solid #b2d8c2;
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-size: 0.9rem;
+  color: #1a3d2b;
+  margin: 14px 0;
+}
+.url-box a {
+  color: #2d6e4e;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+/* Contact Cards */
+.contact-card {
+  background: #f7fbf9;
+  border: 1px solid #d4eadd;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin: 16px 0;
+}
+.contact-card h4 { color: #1a3d2b; margin-top: 0; }
+.contact-card p { margin-bottom: 6px; }
+.contact-card a { color: #2d6e4e; }
+
+/* Back to Top */
+.back-top {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.82rem;
+  color: #3a7a5a;
+  text-decoration: none;
+}
+.back-top:hover { text-decoration: underline; }
+
+/* Divider */
+.policy-divider {
+  border: none;
+  border-top: 1px solid #d4eadd;
+  margin: 40px 0;
+}
