@@ -15,11 +15,48 @@
 <meta property="og:url" content="https://www.healthytantra.com/faq.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Healthy Tantra">
-<link rel="canonical" href="https://healthytantra.com/faq.html">
+<link rel="canonical" href="https://www.healthytantra.com/faq.html">
 <meta name="author" content="Healthy Tantra">
 <meta name="description" content="Frequently asked questions about consultations, wellness experts, Ayurveda, Homeopathy, unani, healthcare products, Healthcare accessories, Wellness experts, yoga guidance, medicine delivery, privacy and Healthy Tantra services.">
 <meta property="og:site_name" content="Healthy Tantra">
 <meta name="keywords" content="Healthy Tantra FAQs, online consultation help, Ayurveda support, yoga consultation, medicine delivery support">
+
+<script>
+  // Auto-generates FAQPage schema from the visible .faq-item blocks on this page.
+  // Add/edit/remove questions only in the HTML above — this keeps the schema in sync automatically.
+  document.addEventListener('DOMContentLoaded', function () {
+    const faqItems = document.querySelectorAll('.faq-item');
+    const mainEntity = [];
+
+    faqItems.forEach(function (item) {
+      const questionEl = item.querySelector('.question');
+      const answerEl = item.querySelector('.answer');
+      if (!questionEl || !answerEl) return;
+
+      mainEntity.push({
+        "@type": "Question",
+        "name": questionEl.textContent.trim(),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": answerEl.textContent.trim()
+        }
+      });
+    });
+
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": mainEntity
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+  });
+</script>
+
+
 
 </head>
 
