@@ -1767,9 +1767,27 @@ small {
 }
 
 .faq-page .answer {
-  color: #5b6b75;
-  line-height: 1.6;
-  font-size: 14px;
+  color: #3d4852;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+.faq-page .answer p {
+  margin: 0 0 14px 0;
+}
+
+.faq-page .answer p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-page .answer ul {
+  margin: 0 0 14px 0;
+  padding-left: 22px;
+}
+
+.faq-page .answer li {
+  margin-bottom: 8px;
+  line-height: 1.7;
 }
 .surface {
   background: var(--card);
