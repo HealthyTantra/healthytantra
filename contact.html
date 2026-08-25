@@ -7,17 +7,98 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="css/style.css">
   <meta property="og:title" content="Contact Healthy Tantra">
-<meta property="og:description" content="Reach out to Healthy Tantra support and wellness care team.">
-<meta property="og:image" content="https://www.healthytantra.com/assets/og-banner.jpg">
-<meta property="og:url" content="https://www.healthytantra.com/contact.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Healthy Tantra">
-<link rel="canonical" href="https://www.healthytantra.com/contact.html">
-<meta name="author" content="Healthy Tantra">
-<meta property="og:site_name" content="Healthy Tantra">
-<meta name="description" content="Contact Healthy Tantra for wellness support, consultation assistance, healthcare guidance and all kind of health related products and platform related queries.">
-<meta name="keywords" content="Healthy Tantra contact, wellness support, healthcare support, consultation assistance, customer care">
+  <meta property="og:description" content="Reach out to Healthy Tantra support and wellness care team.">
+  <meta property="og:image" content="https://www.healthytantra.com/assets/og-banner.jpg">
+  <meta property="og:url" content="https://www.healthytantra.com/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Healthy Tantra">
+  <link rel="canonical" href="https://www.healthytantra.com/contact.html">
+  <meta name="author" content="Healthy Tantra">
+  <meta name="description" content="Contact Healthy Tantra for wellness support, consultation assistance, healthcare guidance and all kind of health related products and platform related queries.">
+  <meta name="keywords" content="Healthy Tantra contact, wellness support, healthcare support, consultation assistance, customer care">
 
+  <!-- Mobile Sticky Bar & Responsive Form Styles -->
+  <style>
+    /* Sticky Mobile App Download Bar */
+    .mobile-sticky-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #4c6e81;
+      padding: 12px 16px;
+      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
+      z-index: 10000;
+    }
+    .bar-text {
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+    }
+    .bar-text strong {
+      font-size: 14px;
+    }
+    .bar-text span {
+      font-size: 11px;
+      opacity: 0.9;
+    }
+    .bar-btn {
+      background-color: #D9822B;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    @media (min-width: 768px) {
+      .mobile-sticky-bar {
+        display: none;
+      }
+    }
+
+    /* Mobile Form Display Fixes (Mobile Only - Desktop Unchanged) */
+    @media (max-width: 767px) {
+      .contact-section {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 80px; /* Space for sticky bar */
+      }
+      .contact-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      .contact-form {
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .contact-form form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        font-size: 16px !important; /* Prevents auto-zoom on iOS */
+        padding: 12px 14px !important;
+        margin-bottom: 12px !important;
+        border-radius: 6px;
+      }
+      .contact-form button[type="submit"] {
+        width: 100% !important;
+        padding: 14px !important;
+        font-size: 16px !important;
+        box-sizing: border-box !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -27,36 +108,23 @@
       <h2 class="logo">Healthy Tantra</h2>
       <span class="brand-tagline">Many Ways to Heal</span>
     </div>
-   <nav>
+    
+    <nav>
+      <a href="index.html" aria-label="Healthy Tantra Home Page">Home</a>
+      <a href="blog.html" aria-label="Healthy Tantra Blog Page">Blogs</a>
+      <a href="faq.html" aria-label="Healthy Tantra FAQ Page">FAQ</a>
+      <a href="about.html" aria-label="About Healthy Tantra">About</a>
+      <a href="contact.html" aria-label="Contact Healthy Tantra">Contact</a>
+    </nav>
 
-<a href="index.html"
-aria-label="Healthy Tantra Home Page">
-Home
-</a>
+    <a href="https://play.google.com/store/apps/details?id=com.healthytantra.app" class="header-download-btn" target="_blank" rel="noopener noreferrer">
+      Download App
+    </a>
 
-<a href="blog.html"
-aria-label="Healthy Tantra Blog Page">
-Blogs
-</a>
-
-<a href="faq.html"
-aria-label="Healthy Tantra FAQ Page">
-FAQ
-</a>
-
-<a href="about.html"
-aria-label="About Healthy Tantra">
-About
-</a>
-
-<a href="contact.html"
-aria-label="Contact Healthy Tantra">
-Contact
-</a>
-
-</nav>
-    <a href="index.html#download-app" class="header-download-btn">
-      Download App</a>
+    <!-- Mobile menu toggle button -->
+    <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      ☰
+    </button>
   </div>
 </header>
 
@@ -68,51 +136,52 @@ Contact
 </section>
 
 <section class="contact-section container">
-
   <div class="contact-grid">
 
     <!-- Contact Info -->
     <div class="contact-info">
       <h2>Get in Touch</h2>
-    <p>
-    For assistance related to consultations, wellness guidance, account support, or marketplace services, please contact our team.
-  </p>
-
-       <div class="info-block">
-    <p><strong>Email:</strong> Care@healthytantra.com</p>
-    <p><strong>Support Hours:</strong> Monday – Saturday, 10:00 AM – 6:00 PM</p>
-    <p><strong>Response Time:</strong> Within 24 hours</p>
-  </div>
-   <div class="info-block">
-    <p><strong>Business Address:</strong><br>
-    Healthy Tantra <br>
-    Delhi 110012, India</p>
-  </div>
       <p>
-    Our team actively monitors all messages and responds within 24 hours.
-  </p>
+        For assistance related to consultations, wellness guidance, account support, or marketplace services, please contact our team.
+      </p>
+
+      <div class="info-block">
+        <p><strong>Email:</strong> care@healthytantra.com</p>
+        <p><strong>Support Hours:</strong> Monday – Saturday, 10:00 AM – 6:00 PM</p>
+        <p><strong>Response Time:</strong> Within 24 hours</p>
+      </div>
+
+      <div class="info-block">
+        <p><strong>Business Address:</strong><br>
+        Healthy Tantra <br>
+        Delhi 110012, India</p>
+      </div>
+
+      <p>
+        Our team actively monitors all messages and responds within 24 hours.
+      </p>
     </div>
 
     <!-- Contact Form -->
     <div class="contact-form">
-  <h2>Send a Message</h2>
+      <h2>Send a Message</h2>
 
-  <form id="contactForm">
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Subject">
+        <textarea placeholder="Your Message" rows="6" required></textarea>
 
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <input type="text" placeholder="Subject">
-    <textarea placeholder="Your Message" rows="6" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
 
-    <button type="submit">Send Message</button>
-  </form>
+      <!-- SUCCESS MESSAGE -->
+      <p id="successMessage" style="display:none; margin-top:15px; color:green; font-weight:500;">
+        We have received your information. Our team will contact you back within 48 hours.
+      </p>
+    </div>
 
-  <!-- SUCCESS MESSAGE -->
-  <p id="successMessage" style="display:none; margin-top:15px; color:green; font-weight:500;">
-    We have received your information. Our team will contact you back within 48 hours.
-  </p>
-
-</div>
+  </div>
 </section>
 
 <section class="contact-note container">
@@ -123,35 +192,46 @@ Contact
 
 <footer class="footer">
   <div class="footer-inner">
-      <strong>Healthy Tantra</strong>
-      <p class="footer-email">Email: care@healthytantra.com</p>
-      <div class="footer-links">
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms.html">Terms & Conditions</a>
-        <a href="faq.html">FAQs</a>
-      </div>
-      <div class="footer-divider"></div>
-      <p class="disclaimer">
-        Healthy Tantra provides wellness guidance and lifestyle support. It is not intended for emergency medical situations. Please consult a qualified healthcare professional when required.
-      </p>
-      <p class="footer-copy">© 2026 Healthy Tantra. All rights reserved.</p>
+    <strong>Healthy Tantra</strong>
+    <p class="footer-email">Email: care@healthytantra.com</p>
+    <div class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="faq.html">FAQs</a>
+    </div>
+    <div class="footer-divider"></div>
+    <p class="disclaimer">
+      Healthy Tantra provides wellness guidance and lifestyle support. It is not intended for emergency medical situations. Please consult a qualified healthcare professional when required.
+    </p>
+    <p class="footer-copy">© 2026 Healthy Tantra. All rights reserved.</p>
   </div>
 </footer>
+
+<!-- Sticky Mobile Download Bar -->
+<div class="mobile-sticky-bar">
+  <div class="bar-text">
+    <strong>Healthy Tantra App</strong>
+    <span>Consult Doctors & Shop Wellness</span>
+  </div>
+  <a href="https://play.google.com/store/apps/details?id=com.healthytantra.app" class="bar-btn" target="_blank" rel="noopener noreferrer">
+    Install App
+  </a>
+</div>
+
 <script>
   document.getElementById("contactForm").addEventListener("submit", function(e){
-  e.preventDefault();
-  
-  // Hide form, show message
-  this.style.opacity = "0.3";
-  this.style.pointerEvents = "none";
-  
-  const msg = document.getElementById("successMessage");
-  msg.style.display = "block";
-  msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    e.preventDefault();
+    this.style.opacity = "0.3";
+    this.style.pointerEvents = "none";
+    
+    const msg = document.getElementById("successMessage");
+    msg.style.display = "block";
+    msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-  this.reset();
-});
+    this.reset();
+  });
 </script>
+
 <script>
   // Highlight current page in navigation
   document.addEventListener('DOMContentLoaded', function() {
@@ -164,17 +244,9 @@ Contact
     });
   });
 </script>
-<!-- Sticky Mobile Download Bar (Place on all pages right before </body>) -->
-<div class="mobile-sticky-bar">
-  <div class="bar-text">
-    <strong>Healthy Tantra App</strong>
-    <span>Consult Doctors & Shop Wellness</span>
-  </div>
-  <a href="https://play.google.com/store/apps/details?id=com.healthytantra.app" class="bar-btn" target="_blank" rel="noopener noreferrer">
-    Install App
-  </a>
-</div>
+
 <script>
+  // Mobile Hamburger Toggle Behavior
   document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('.header');
     const menuButton = document.querySelector('.mobile-menu-toggle');
@@ -198,5 +270,6 @@ Contact
     });
   });
 </script>
+
 </body>
 </html>
