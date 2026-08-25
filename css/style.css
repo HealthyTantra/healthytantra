@@ -2313,3 +2313,44 @@ textarea {
     }
   }
 }
+/* Add to bottom of css/style.css */
+.mobile-sticky-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #4c6e81;
+  padding: 12px 16px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 10000;
+}
+.bar-text {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+.bar-text strong {
+  font-size: 14px;
+}
+.bar-text span {
+  font-size: 11px;
+  opacity: 0.9;
+}
+.bar-btn {
+  background-color: #D9822B;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 13px;
+  white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .mobile-sticky-bar {
+    display: none;
+  }
+}

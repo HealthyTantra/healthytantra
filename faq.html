@@ -352,6 +352,40 @@ Contact
     });
   });
 </script>
+<!-- Sticky Mobile Download Bar (Place on all pages right before </body>) -->
+<div class="mobile-sticky-bar">
+  <div class="bar-text">
+    <strong>Healthy Tantra App</strong>
+    <span>Consult Doctors & Shop Wellness</span>
+  </div>
+  <a href="https://play.google.com/store/apps/details?id=com.healthytantra.app" class="bar-btn" target="_blank" rel="noopener noreferrer">
+    Install App
+  </a>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('.header');
+    const menuButton = document.querySelector('.mobile-menu-toggle');
+
+    if (!header || !menuButton) return;
+
+    menuButton.addEventListener('click', function () {
+      const isOpen = header.classList.toggle('mobile-open');
+      menuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      menuButton.textContent = isOpen ? '✕' : '☰';
+    });
+
+    header.querySelectorAll('nav a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        header.classList.remove('mobile-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open menu');
+        menuButton.textContent = '☰';
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
