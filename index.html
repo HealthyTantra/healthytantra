@@ -21,6 +21,9 @@
   <!-- Smart App Banner meta tag for Android -->
   <meta name="google-play-app" content="app-id=com.healthytantra.app">
 
+  <!-- Smart App Banner meta tag for iOS -->
+  <meta name="apple-itunes-app" content="app-id=6799877739">
+
   <!-- Structured Data: WebSite (Fixes Site Name in Search Results) -->
   <script type="application/ld+json">
   {
@@ -42,7 +45,8 @@
     "logo": "https://www.healthytantra.com/assets/favicon.png",
     "email": "care@healthytantra.com",
     "sameAs": [
-      "https://play.google.com/store/apps/details?id=com.healthytantra.app"
+      "https://play.google.com/store/apps/details?id=com.healthytantra.app",
+      "https://apps.apple.com/in/app/healthy-tantra/id6799877739"
     ]
   }
   </script>
@@ -57,6 +61,19 @@
     "applicationCategory": "HealthApplication",
     "url": "https://play.google.com/store/apps/details?id=com.healthytantra.app",
     "installUrl": "https://play.google.com/store/apps/details?id=com.healthytantra.app"
+  }
+  </script>
+
+  <!-- Structured Data: Mobile Application (Points to Apple App Store) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Healthy Tantra",
+    "operatingSystem": "IOS",
+    "applicationCategory": "HealthApplication",
+    "url": "https://apps.apple.com/in/app/healthy-tantra/id6799877739",
+    "installUrl": "https://apps.apple.com/in/app/healthy-tantra/id6799877739"
   }
   </script>
 
@@ -153,7 +170,11 @@
       <a href="contact.html" aria-label="Contact Healthy Tantra">Contact</a>
     </nav>
 
-    <a href="https://play.google.com/store/apps/details?id=com.healthytantra.app" class="header-download-btn" target="_blank" rel="noopener noreferrer">
+    <a href="https://play.google.com/store/apps/details?id=com.healthytantra.app"
+       class="header-download-btn app-smart-link"
+       data-android-href="https://play.google.com/store/apps/details?id=com.healthytantra.app"
+       data-ios-href="https://apps.apple.com/in/app/healthy-tantra/id6799877739"
+       target="_blank" rel="noopener noreferrer">
       Download App
     </a>
 
@@ -170,12 +191,20 @@
       <div class="overlay-content">
         <h1>Online Doctor Consultation, Many Ways to Heal</h1>
         <p class="hero-tagline">
-          Consult verified doctors online across Allopathy, Ayurveda, Homeopathy, and Unani, book appointments, and order medicines — all in one healthcare platform.
+          Consult verified doctors online across Allopathy, Ayurveda, Homeopathy, and Unani, book appointments, and order medicines — all in one healthcare platform. Due to security and customer experience we are only availale as app. Just download it 
         </p>
 
         <div class="cta">
-          <a href="https://play.google.com/store/apps/details?id=com.healthytantra.app" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Consultation</a>
-          <a href="https://play.google.com/store/apps/details?id=com.healthytantra.app" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Shop Now</a>
+          <a href="https://play.google.com/store/apps/details?id=com.healthytantra.app"
+             class="btn btn-primary app-smart-link"
+             data-android-href="https://play.google.com/store/apps/details?id=com.healthytantra.app"
+             data-ios-href="https://apps.apple.com/in/app/healthy-tantra/id6799877739"
+             target="_blank" rel="noopener noreferrer">Consult Now</a>
+          <a href="https://play.google.com/store/apps/details?id=com.healthytantra.app"
+             class="btn btn-secondary app-smart-link"
+             data-android-href="https://play.google.com/store/apps/details?id=com.healthytantra.app"
+             data-ios-href="https://apps.apple.com/in/app/healthy-tantra/id6799877739"
+             target="_blank" rel="noopener noreferrer">Shop Now</a>
         </div>
         <div class="trust-bar">
           <span>✔ Verified Doctors</span>
@@ -192,7 +221,11 @@
       <h1>Consult Verified Doctors Online</h1>
       <p>Book an online doctor consultation with trusted, verified healthcare professionals.</p>
       <div class="cta">
-        <a href="https://play.google.com/store/apps/details?id=com.healthytantra.app" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Consultation</a>
+        <a href="https://play.google.com/store/apps/details?id=com.healthytantra.app"
+           class="btn btn-primary app-smart-link"
+           data-android-href="https://play.google.com/store/apps/details?id=com.healthytantra.app"
+           data-ios-href="https://apps.apple.com/in/app/healthy-tantra/id6799877739"
+           target="_blank" rel="noopener noreferrer">Book Consultation</a>
       </div>
     </div>
   </div>
@@ -202,7 +235,11 @@
       <h1>Order Medicines Online</h1>
       <p>Buy medicines and healthcare products from a trusted online pharmacy marketplace.</p>
       <div class="cta">
-        <a href="https://play.google.com/store/apps/details?id=com.healthytantra.app" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Shop Now</a>
+        <a href="https://play.google.com/store/apps/details?id=com.healthytantra.app"
+           class="btn btn-secondary app-smart-link"
+           data-android-href="https://play.google.com/store/apps/details?id=com.healthytantra.app"
+           data-ios-href="https://apps.apple.com/in/app/healthy-tantra/id6799877739"
+           target="_blank" rel="noopener noreferrer">Shop Now</a>
       </div>
     </div>
   </div>
@@ -495,14 +532,14 @@
     <div class="container">
       <h2>Healthy Tantra Mobile App</h2>
       <p>
-        Live consultations, secure payments, and real-time appointment reminders all work best in the Healthy Tantra app. Launching soon on iOS and already available on Android, download the app to consult verified doctors online, book appointments, order medicines, and access preventive healthcare guidance — all in one platform.
+        Live consultations, secure payments, and real-time appointment reminders all work best in the Healthy Tantra app. Now available on both iOS and Android, download the app to consult verified doctors online, book appointments, order medicines, and access preventive healthcare guidance — all in one platform.
       </p>
 
       <div class="store-buttons">
-        <a href="#" class="store-btn apple-btn">
+        <a href="https://apps.apple.com/in/app/healthy-tantra/id6799877739" class="store-btn apple-btn" target="_blank" rel="noopener noreferrer">
           <span class="store-icon"></span>
           <div>
-            <small>Coming Soon on</small>
+            <small>Available on</small>
             <strong>App Store</strong>
           </div>
         </a>
@@ -527,10 +564,10 @@
     </p>
 
     <div class="store-buttons">
-      <a href="#" class="store-btn apple-btn">
+      <a href="https://apps.apple.com/in/app/healthy-tantra/id6799877739" class="store-btn apple-btn" target="_blank" rel="noopener noreferrer">
         <span class="store-icon"></span>
         <div>
-          <small>Coming Soon on</small>
+          <small>Available on</small>
           <strong>App Store</strong>
         </div>
       </a>
@@ -552,7 +589,11 @@
     <strong>Healthy Tantra App</strong>
     <span>Consult Doctors & Order Medicines</span>
   </div>
-  <a href="https://play.google.com/store/apps/details?id=com.healthytantra.app" class="bar-btn" target="_blank" rel="noopener noreferrer">
+  <a href="https://play.google.com/store/apps/details?id=com.healthytantra.app"
+     class="bar-btn app-smart-link"
+     data-android-href="https://play.google.com/store/apps/details?id=com.healthytantra.app"
+     data-ios-href="https://apps.apple.com/in/app/healthy-tantra/id6799877739"
+     target="_blank" rel="noopener noreferrer">
     Install App
   </a>
 </div>
@@ -575,6 +616,34 @@
 </footer>
 
 <script src="js/app.js"></script>
+
+<!-- Routes "Install App" / "Download App" / "Consult Now" style links to the
+     correct store based on the visitor's device. This is what was causing the
+     Play Store redirect on iOS Safari -- those links previously all pointed
+     straight to the Play Store URL with no device check. -->
+<script>
+  (function () {
+    function isIOS() {
+      return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    }
+    function isAndroid() {
+      return /Android/.test(navigator.userAgent);
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.app-smart-link').forEach(function (link) {
+        var iosHref = link.getAttribute('data-ios-href');
+        var androidHref = link.getAttribute('data-android-href');
+        if (isIOS() && iosHref) {
+          link.setAttribute('href', iosHref);
+        } else if (isAndroid() && androidHref) {
+          link.setAttribute('href', androidHref);
+        }
+        // Desktop/other: leave the default href as-is (Play Store link).
+      });
+    });
+  })();
+</script>
 
 <script>
   // Highlight current page in navigation
