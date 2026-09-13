@@ -29,7 +29,7 @@ const EXCLUDED_FILES = new Set([
   '404.html'
 ]);
 
-// Priority / changefreq rules — first matching rule wins.
+// Priority / changefreq rules - first matching rule wins.
 // Pattern is matched against the URL path (e.g. "/", "/blog/ayurveda.html").
 const RULES = [
   { pattern: /^\/$/, changefreq: 'weekly', priority: '1.0' },
