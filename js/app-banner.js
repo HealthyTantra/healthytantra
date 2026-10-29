@@ -15,15 +15,12 @@
     (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   var isAndroid = /Android/i.test(ua);
 
-  var msgs = {
-    blog: 'Get doctor advice in the app, not just articles',
-    faq: 'Have a question? Ask a doctor in the Healthy Tantra app',
-    about: 'Many Ways to Heal: download the Healthy Tantra app',
-    contact: 'Fastest support is inside the Healthy Tantra app'
-  };
-  var page = (location.pathname.split('/').pop() || 'index').replace('.html', '');
-  var text = msgs[page.split('-')[0]] ||
-    'Download the Healthy Tantra app: consult verified doctors, pay only for the minutes';
+  var text =
+  'Download the Healthy Tantra app and consult a doctor now!' +
+  '<span class="htb-gap"></span>' +
+  'Pay only for the minutes you consult!' +
+  '<span class="htb-gap"></span>' +
+  'Consultations and orders are available only on the Healthy Tantra app.';
 
   function btn(href, label) {
     return '<a class="htb-btn" href="' + href + '" rel="noopener">' + label + '</a>';

@@ -2380,6 +2380,10 @@ textarea {
     font-size: 13px;
     font-weight: 600;
   }
+    #ht-banner .htb-gap {
+    display: inline-block;
+    width: 120px;
+  }
   #ht-banner .htb-track {
     flex: 1;
     min-width: 0;
