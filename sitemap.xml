@@ -116,6 +116,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.healthytantra.com/doctor.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.healthytantra.com/doctor/dr-harshal-sawarkar.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -129,6 +134,11 @@
     <loc>https://www.healthytantra.com/privacy-policy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.healthytantra.com/seller.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.healthytantra.com/terms.html</loc>
