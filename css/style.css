@@ -2431,7 +2431,10 @@ textarea {
 }
 
 
-/* HEALTHY TANTRA — FESTIVE DIWALI LIGHTS */
+/* =========================================
+   HEALTHY TANTRA — DIWALI LIGHTS
+   White + Gold + Soft Blue
+   ========================================= */
 
 .header {
   isolation: isolate;
@@ -2447,18 +2450,19 @@ textarea {
   pointer-events: none;
   overflow: hidden;
 
-  /* Dark red bulbs */
+  /* Soft blue bulbs */
   background-image: radial-gradient(
     circle,
-    #a82032 0 2.5px,
-    rgba(168, 32, 50, 0.35) 3px,
+    #7da9c8 0 2.5px,
+    rgba(125, 169, 200, 0.35) 3px,
     transparent 5px
   );
+
   background-size: 36px 18px;
   background-position: 24px 0;
   background-repeat: repeat-x;
 
-  animation: ht-red-glow 2.8s ease-in-out infinite alternate;
+  animation: ht-blue-glow 3.2s ease-in-out infinite alternate;
 }
 
 /* White bulbs */
@@ -2478,10 +2482,10 @@ textarea {
   background-position: 0 0;
   background-repeat: repeat-x;
 
-  animation: ht-white-glow 2.5s ease-in-out infinite alternate;
+  animation: ht-white-glow 3s ease-in-out infinite alternate;
 }
 
-/* Gold bulbs */
+/* Warm gold bulbs */
 .header .ht-diwali-lights::after {
   content: "";
   position: absolute;
@@ -2498,39 +2502,42 @@ textarea {
   background-position: 12px 0;
   background-repeat: repeat-x;
 
-  animation: ht-gold-glow 3s ease-in-out infinite alternate;
+  animation: ht-gold-glow 3.4s ease-in-out infinite alternate;
 }
 
-/* Slow, gentle white glow */
+/* Gentle white glow */
 @keyframes ht-white-glow {
   0%, 100% {
     opacity: 0.65;
     filter: brightness(0.95);
   }
+
   50% {
     opacity: 1;
     filter: brightness(1.3);
   }
 }
 
-/* Slow, warm gold glow */
+/* Gentle gold glow */
 @keyframes ht-gold-glow {
   0%, 100% {
     opacity: 0.7;
     filter: brightness(0.95);
   }
+
   50% {
     opacity: 1;
     filter: brightness(1.35);
   }
 }
 
-/* Slow dark red glow */
-@keyframes ht-red-glow {
+/* Gentle blue glow */
+@keyframes ht-blue-glow {
   0%, 100% {
     opacity: 0.65;
     filter: brightness(0.9);
   }
+
   50% {
     opacity: 1;
     filter: brightness(1.3);
@@ -2559,7 +2566,7 @@ textarea {
   }
 }
 
-/* Accessibility */
+/* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
   .header .ht-diwali-lights,
   .header .ht-diwali-lights::before,
@@ -2569,4 +2576,3 @@ textarea {
     filter: none;
   }
 }
-
