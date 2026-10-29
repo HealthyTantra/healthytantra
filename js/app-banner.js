@@ -16,11 +16,11 @@
   var isAndroid = /Android/i.test(ua);
 
  var text =
-  'Download Healthy Tantra app & Consult a Doctor Now' +
+  'Download Healthy Tantra app || Consult Doctor Now' +
   '<span class="htb-gap"></span>' +
   'Pay only for the minutes you consult!' +
   '<span class="htb-gap"></span>' +
-  'Consultations and Orders are available only on Healthy Tantra app.';
+  'Orders Medicines and Wellness products on Healthy Tantra app.';
 
   function btn(href, label) {
     return '<a class="htb-btn" href="' + href + '" rel="noopener">' + label + '</a>';
