@@ -2430,7 +2430,8 @@ textarea {
   isolation: isolate;
 }
 
-/* HEALTHY TANTRA — ALTERNATING WHITE & GOLD DIWALI LIGHTS */
+
+/* HEALTHY TANTRA — FESTIVE DIWALI LIGHTS */
 
 .header {
   isolation: isolate;
@@ -2438,13 +2439,26 @@ textarea {
 
 .header .ht-diwali-lights {
   position: absolute;
-  top: 0;
+  top: -2px;
   left: 0;
   width: 100%;
   height: 18px;
   z-index: 10;
   pointer-events: none;
   overflow: hidden;
+
+  /* Dark red bulbs */
+  background-image: radial-gradient(
+    circle,
+    #a82032 0 2.5px,
+    rgba(168, 32, 50, 0.35) 3px,
+    transparent 5px
+  );
+  background-size: 36px 18px;
+  background-position: 24px 0;
+  background-repeat: repeat-x;
+
+  animation: ht-red-glow 2.8s ease-in-out infinite alternate;
 }
 
 /* White bulbs */
@@ -2460,14 +2474,14 @@ textarea {
     transparent 5px
   );
 
-  background-size: 24px 18px;
+  background-size: 36px 18px;
   background-position: 0 0;
   background-repeat: repeat-x;
 
-  animation: ht-white-twinkle 1.4s ease-in-out infinite alternate;
+  animation: ht-white-glow 2.5s ease-in-out infinite alternate;
 }
 
-/* Gold bulbs, positioned between white bulbs */
+/* Gold bulbs */
 .header .ht-diwali-lights::after {
   content: "";
   position: absolute;
@@ -2480,57 +2494,46 @@ textarea {
     transparent 5px
   );
 
-  background-size: 24px 18px;
+  background-size: 36px 18px;
   background-position: 12px 0;
   background-repeat: repeat-x;
 
-  animation: ht-gold-twinkle 1.7s ease-in-out infinite alternate;
-  animation-delay: -0.8s;
+  animation: ht-gold-glow 3s ease-in-out infinite alternate;
 }
 
-/* White lights brighten and dim */
-@keyframes ht-white-twinkle {
-  0% {
-    opacity: 0.45;
-    filter: brightness(0.8);
-  }
-
-  45% {
-    opacity: 1;
-    filter: brightness(1.5);
-  }
-
-  70% {
+/* Slow, gentle white glow */
+@keyframes ht-white-glow {
+  0%, 100% {
     opacity: 0.65;
-    filter: brightness(1);
+    filter: brightness(0.95);
   }
-
-  100% {
-    opacity: 0.9;
+  50% {
+    opacity: 1;
     filter: brightness(1.3);
   }
 }
 
-/* Gold lights glow at a different rhythm */
-@keyframes ht-gold-twinkle {
-  0% {
-    opacity: 0.9;
-    filter: brightness(1.3);
+/* Slow, warm gold glow */
+@keyframes ht-gold-glow {
+  0%, 100% {
+    opacity: 0.7;
+    filter: brightness(0.95);
   }
-
-  40% {
-    opacity: 0.45;
-    filter: brightness(0.8);
-  }
-
-  75% {
+  50% {
     opacity: 1;
-    filter: brightness(1.6);
+    filter: brightness(1.35);
   }
+}
 
-  100% {
-    opacity: 0.55;
+/* Slow dark red glow */
+@keyframes ht-red-glow {
+  0%, 100% {
+    opacity: 0.65;
     filter: brightness(0.9);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.3);
   }
 }
 
@@ -2538,19 +2541,27 @@ textarea {
 @media (max-width: 768px) {
   .header .ht-diwali-lights {
     height: 16px;
+    background-size: 30px 16px;
+    background-position: 20px 0;
   }
 
   .header .ht-diwali-lights::before,
   .header .ht-diwali-lights::after {
-    background-size: 20px 16px;
+    background-size: 30px 16px;
+  }
+
+  .header .ht-diwali-lights::before {
+    background-position: 0 0;
   }
 
   .header .ht-diwali-lights::after {
     background-position: 10px 0;
   }
 }
+
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
+  .header .ht-diwali-lights,
   .header .ht-diwali-lights::before,
   .header .ht-diwali-lights::after {
     animation: none;
@@ -2558,3 +2569,4 @@ textarea {
     filter: none;
   }
 }
+
