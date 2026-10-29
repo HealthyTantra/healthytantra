@@ -1,4 +1,5 @@
 (function () {
+    if (!window.matchMedia('(min-width: 769px)').matches) return;
   var KEY = 'ht_banner_hidden_until';
   try { if (+localStorage.getItem(KEY) > Date.now()) return; } catch (e) {}
 
