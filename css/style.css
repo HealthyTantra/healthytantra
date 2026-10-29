@@ -2431,55 +2431,79 @@ textarea {
 }
 
 
-/* ========================================
-   HEALTHY TANTRA — DIWALI LIGHTS
-   ======================================== */
+/* HEALTHY TANTRA — COLOURFUL DIWALI LIGHTS */
 
 .header {
   isolation: isolate;
 }
 
-/* String of warm golden lights */
 .header .ht-diwali-lights {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 12px;
+  height: 18px;
   z-index: 10;
   pointer-events: none;
   overflow: hidden;
 
-  background:
-    radial-gradient(
-      circle,
-      #fff9dc 0 1.5px,
-      #ffd36a 2px,
-      rgba(255, 190, 70, 0.35) 3px,
-      transparent 5px
-    ) 0 0 / 10% 12px repeat-x;
+  background-image:
+    radial-gradient(circle, #fffbd0 0 2px, #ffcc33 2.5px, transparent 5px),
+    radial-gradient(circle, #ff5555 0 2px, #ff3333 2.5px, transparent 5px),
+    radial-gradient(circle, #7dff9b 0 2px, #16c75b 2.5px, transparent 5px),
+    radial-gradient(circle, #8fe8ff 0 2px, #25baff 2.5px, transparent 5px),
+    radial-gradient(circle, #ffc0f0 0 2px, #ff65c8 2.5px, transparent 5px),
+    radial-gradient(ellipse at center, rgba(255, 190, 70, 0.12), transparent 70%);
 
-  animation: ht-diwali-glow 2.4s ease-in-out infinite alternate;
+  background-size:
+    36px 18px,
+    45px 18px,
+    40px 18px,
+    48px 18px,
+    42px 18px,
+    100% 18px;
+
+  background-position:
+    0 0,
+    9px 4px,
+    18px 0,
+    27px 4px,
+    34px 0,
+    0 0;
+
+  background-repeat: repeat-x;
+  animation: ht-diwali-colour-glow 1.8s ease-in-out infinite alternate;
 }
 
-/* Soft festive glow */
-@keyframes ht-diwali-glow {
+/* Colourful festive glow */
+@keyframes ht-diwali-colour-glow {
   0% {
-    opacity: 0.65;
+    opacity: 0.75;
     filter: brightness(0.9);
   }
 
-  100% {
+  50% {
     opacity: 1;
-    filter: brightness(1.25);
+    filter: brightness(1.3);
+  }
+
+  100% {
+    opacity: 0.85;
+    filter: brightness(1.1);
   }
 }
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .header .ht-diwali-lights {
-    height: 9px;
-    background-size: 12.5% 9px;
+    height: 16px;
+    background-size:
+      28px 16px,
+      34px 16px,
+      30px 16px,
+      36px 16px,
+      32px 16px,
+      100% 16px;
   }
 }
 
@@ -2487,7 +2511,7 @@ textarea {
 @media (prefers-reduced-motion: reduce) {
   .header .ht-diwali-lights {
     animation: none;
-    opacity: 0.85;
+    opacity: 1;
     filter: none;
   }
 }
