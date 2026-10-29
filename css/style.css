@@ -2455,12 +2455,13 @@ textarea {
   position: absolute;
   inset: 0;
 
-  background-image: radial-gradient(
-    circle,
-    #ffffff 0 2.5px,
-    rgba(255, 255, 255, 0.4) 3px,
-    transparent 5px
-  );
+background-image: radial-gradient(
+  circle,
+  #ffffff 0 2.5px,
+  rgba(255, 255, 255, 0.75) 3px,
+  rgba(255, 255, 255, 0.25) 4px,
+  transparent 7px
+);
 
   background-size: 24px 18px;
   background-position: 0 0;
