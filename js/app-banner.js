@@ -36,9 +36,10 @@
   function btn(href, label) {
     return '<a class="htb-btn" href="' + href + '" rel="noopener">' + label + '</a>';
   }
-  var buttons = isIOS ? btn(IOS, 'App Store')
-    : isAndroid ? btn(AND, 'Google Play')
-    : btn(IOS, 'App Store') + btn(AND, 'Google Play');
+   
+    var buttons = isIOS ? btn(IOS, 'App Store')
+      : isAndroid ? btn(AND, 'Google Play')
+      : btn(IOS, 'App Store') + btn(AND, 'Google Play');
 
   function build() {
     var bar = document.createElement('div');
