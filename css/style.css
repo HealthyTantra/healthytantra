@@ -2355,73 +2355,128 @@ textarea {
   }
 }
 
-/* ===== App download banner (desktop only) ===== */
-#ht-banner { display: none; }
+/* =========================================
+   HEALTHY TANTRA — DESKTOP APP ANNOUNCEMENT
+   ========================================= */
+
+#ht-banner {
+  display: none;
+}
+
+:root {
+  --ht-banner-h: 0px;
+}
+
+html.ht-banner-on {
+  --ht-banner-h: 42px;
+}
 
 @media (min-width: 769px) {
-  :root { --ht-banner-h: 0px; }
-  html.ht-banner-on { --ht-banner-h: 40px; }
 
-  body { padding-top: calc(72px + var(--ht-banner-h)); }
-  .header { top: var(--ht-banner-h); }
-  .policy-section { scroll-margin-top: calc(80px + var(--ht-banner-h)); }
+  body {
+    padding-top: calc(72px + var(--ht-banner-h));
+  }
+
+  .header {
+    top: var(--ht-banner-h);
+  }
 
   #ht-banner {
     position: fixed;
-    top: 0; left: 0; right: 0;
-    height: 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 42px;
     z-index: 10001;
+
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 0 12px;
-    background: #22313f;
-    color: #fff;
+    gap: 14px;
+    padding: 0 16px;
+
+    background: #344F60;
+    color: #FFFFFF;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 2px 8px rgba(15,35,48,0.14);
+
+    font-family: 'IBM Plex Sans', sans-serif;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 500;
+    box-sizing: border-box;
   }
-    #ht-banner .htb-gap {
-    display: inline-block;
-    width: 150px;
-  }
+
   #ht-banner .htb-track {
-    flex: 1;
+    flex: 1 1 auto;
     min-width: 0;
     overflow: hidden;
     white-space: nowrap;
   }
+
   #ht-banner .htb-move {
     display: inline-block;
+    white-space: nowrap;
     padding-left: 100%;
-    animation: htb-scroll 35s linear infinite;
+    animation: htb-scroll 38s linear infinite;
+    will-change: transform;
   }
+
+  #ht-banner .htb-move:hover {
+    animation-play-state: paused;
+  }
+
+  #ht-banner .htb-gap {
+    display: inline-block;
+    width: 100px;
+  }
+
   #ht-banner .htb-btn {
-    min-height: 0;
-    padding: 6px 12px;
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 29px;
+    padding: 4px 14px;
+
     border-radius: 999px;
-    background: #fff;
-    color: #22313f;
+    background: #F1C879;
+    color: #344F60;
+
     text-decoration: none;
     font-size: 12px;
     font-weight: 700;
     white-space: nowrap;
+    transition: background 0.2s ease;
   }
+
+  #ht-banner .htb-btn:hover {
+    background: #FFF0CE;
+  }
+
   #ht-banner .htb-x {
-    min-height: 0;
-    width: 32px; height: 32px;
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
     padding: 0;
     border: 0;
     background: transparent;
-    color: #fff;
-    font-size: 22px;
+    color: #FFFFFF;
+    font-size: 21px;
     line-height: 1;
     cursor: pointer;
   }
-  @keyframes htb-scroll { to { transform: translateX(-100%); } }
+
+  @keyframes htb-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+  }
 
   @media (prefers-reduced-motion: reduce) {
-    #ht-banner .htb-move { animation: none; padding-left: 0; }
-    #ht-banner .htb-track { text-overflow: ellipsis; }
+    #ht-banner .htb-move {
+      animation: none;
+      padding-left: 0;
+    }
   }
 }
 
@@ -2429,9 +2484,8 @@ textarea {
   position: relative;
   isolation: isolate;
 }
-
 /* =========================================
-   HEALTHY TANTRA — DIWALI LIGHTS
+   HEALTHY TANTRA — PREMIUM DIWALI LIGHTS
    ========================================= */
 
 .header {
@@ -2444,72 +2498,84 @@ textarea {
   top: 0;
   left: 0;
   width: 100%;
-  height: 12px;
-  z-index: 1;
+  height: 25px;
+  z-index: 3;
   pointer-events: none;
   overflow: hidden;
 }
 
-.header .ht-diwali-lights::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(
-    circle,
-    #ffffff 0 2px,
-    rgba(255,255,255,0.5) 3px,
-    transparent 5px
-  );
-  background-size: 24px 12px;
-  background-repeat: repeat-x;
-  animation: ht-white-glow 3s ease-in-out infinite alternate;
+.header .ht-diwali-lights svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
 }
 
-.header .ht-diwali-lights::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(
-    circle,
-    #ffd778 0 2px,
-    rgba(255,190,65,0.4) 3px,
-    transparent 5px
-  );
-  background-size: 24px 12px;
-  background-position: 12px 0;
-  background-repeat: repeat-x;
-  animation: ht-gold-glow 3.4s ease-in-out infinite alternate;
+/* Fine champagne-gold connecting wire */
+.header .ht-diwali-lights .light-wire {
+  fill: none;
+  stroke: #D6B878;
+  stroke-width: 1.15;
+  stroke-linecap: round;
+  opacity: 0.9;
 }
 
-@keyframes ht-white-glow {
-  from { opacity: 0.7; }
-  to { opacity: 1; }
+/* Small bulb holders */
+.header .ht-diwali-lights .bulb-holder {
+  fill: #D6B878;
 }
 
-@keyframes ht-gold-glow {
-  from { opacity: 0.6; }
-  to { opacity: 1; }
+/* Warm ivory bulbs */
+.header .ht-diwali-lights .bulb-white {
+  fill: #FFF8E8;
+  filter: drop-shadow(0 0 2px rgba(255, 248, 232, 0.8));
+  animation: ht-bulb-white 3.8s ease-in-out infinite;
 }
 
-/* Keep header content above the lights */
-.header > .container {
-  position: relative;
-  z-index: 2;
+/* Soft muted-gold bulbs */
+.header .ht-diwali-lights .bulb-gold {
+  fill: #F1C879;
+  filter: drop-shadow(0 0 3px rgba(241, 200, 121, 0.65));
+  animation: ht-bulb-gold 4.5s ease-in-out infinite;
 }
 
-/* Keep mobile dropdown above all header decorations */
+.header .ht-diwali-lights .bulb-white:nth-of-type(2n) {
+  animation-delay: 1.1s;
+}
+
+.header .ht-diwali-lights .bulb-gold:nth-of-type(2n) {
+  animation-delay: 1.7s;
+}
+
+@keyframes ht-bulb-white {
+  0%, 100% { opacity: 0.82; }
+  50% { opacity: 1; }
+}
+
+@keyframes ht-bulb-gold {
+  0%, 100% { opacity: 0.75; }
+  50% { opacity: 1; }
+}
+
 @media (max-width: 768px) {
-  .header.mobile-open nav {
-    z-index: 10000;
+  .header .ht-diwali-lights {
+    height: 19px;
+  }
+
+  .header .ht-diwali-lights svg {
+    width: 150%;
+    max-width: none;
+    transform: translateX(-16.5%);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .header .ht-diwali-lights::before,
-  .header .ht-diwali-lights::after {
+  .header .ht-diwali-lights .bulb-white,
+  .header .ht-diwali-lights .bulb-gold {
     animation: none;
   }
 }
+
 /* ==========================================
    HEALTHY TANTRA — NAVBAR REFINEMENT
    ========================================== */
