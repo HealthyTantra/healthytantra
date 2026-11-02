@@ -2541,51 +2541,59 @@ html.ht-banner-on {
   animation: ht-bulb-gold 4.8s ease-in-out infinite;
 }
 
-/* Staggered, gentle glow */
-.header .ht-diwali-lights .bulb-white:nth-child(4n) {
-  animation-delay: 1s;
+/* Classic alternating Diwali glow */
+
+.header .ht-diwali-lights .bulb-white {
+  fill: #FFF8E8;
+  animation: ht-classic-white 3.6s ease-in-out infinite;
 }
 
-.header .ht-diwali-lights .bulb-white:nth-child(4n + 1) {
-  animation-delay: 2s;
+.header .ht-diwali-lights .bulb-gold {
+  fill: #F1C879;
+  animation: ht-classic-gold 3.6s ease-in-out infinite;
 }
 
-.header .ht-diwali-lights .bulb-gold:nth-child(4n) {
-  animation-delay: 1.5s;
+/* Alternate neighbouring bulbs */
+.header .ht-diwali-lights .bulb-white:nth-of-type(4n + 1),
+.header .ht-diwali-lights .bulb-gold:nth-of-type(4n + 1) {
+  animation-delay: -1.8s;
 }
 
-.header .ht-diwali-lights .bulb-gold:nth-child(4n + 1) {
-  animation-delay: 2.5s;
-}
-
-@keyframes ht-bulb-white {
+@keyframes ht-classic-white {
   0%, 100% {
-    opacity: 0.8;
-    filter: drop-shadow(0 0 2px rgba(255,248,232,.7))
-            drop-shadow(0 0 5px rgba(255,248,232,.35));
+    opacity: 0.28;
+    filter: drop-shadow(0 0 1px rgba(255,248,232,.2));
   }
   50% {
     opacity: 1;
-    filter: drop-shadow(0 0 3px rgba(255,248,232,1))
-            drop-shadow(0 0 8px rgba(255,248,232,.85))
-            drop-shadow(0 0 13px rgba(255,248,232,.4));
+    filter:
+      drop-shadow(0 0 3px rgba(255,248,232,1))
+      drop-shadow(0 0 7px rgba(255,248,232,.85))
+      drop-shadow(0 0 13px rgba(255,248,232,.5));
   }
 }
 
-@keyframes ht-bulb-gold {
+@keyframes ht-classic-gold {
   0%, 100% {
-    opacity: 0.78;
-    filter: drop-shadow(0 0 2px rgba(241,200,121,.7))
-            drop-shadow(0 0 5px rgba(241,200,121,.35));
+    opacity: 0.28;
+    filter: drop-shadow(0 0 1px rgba(241,200,121,.2));
   }
   50% {
     opacity: 1;
-    filter: drop-shadow(0 0 3px rgba(241,200,121,1))
-            drop-shadow(0 0 8px rgba(241,200,121,.85))
-            drop-shadow(0 0 14px rgba(241,200,121,.4));
+    filter:
+      drop-shadow(0 0 3px rgba(241,200,121,1))
+      drop-shadow(0 0 8px rgba(241,200,121,.85))
+      drop-shadow(0 0 14px rgba(241,200,121,.5));
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .header .ht-diwali-lights .bulb-white,
+  .header .ht-diwali-lights .bulb-gold {
+    animation: none;
+    opacity: 1;
+  }
+}
 /* Mobile positioning */
 @media (max-width: 768px) {
   .header .ht-diwali-lights {
