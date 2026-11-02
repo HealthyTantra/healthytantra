@@ -1,6 +1,9 @@
 (function () {
-    if (!window.matchMedia('(min-width: 769px)').matches) return;
-  var KEY = 'ht_banner_hidden_until';
+  if (!window.matchMedia('(min-width: 769px)').matches) return;
+
+  // Festive message window: Diwali 2026 (8 Nov). Switches off automatically on 11 Nov, IST.
+  var festive = new Date() < new Date('2026-11-11T00:00:00+05:30');
+  var KEY = festive ? 'ht_banner_hidden_diwali26' : 'ht_banner_hidden_until';
   try { if (+localStorage.getItem(KEY) > Date.now()) return; } catch (e) {}
 
   // Reserve the space immediately so the header doesn't jump
@@ -15,15 +18,21 @@
     (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   var isAndroid = /Android/i.test(ua);
 
- var text =
-  'Consult Doctor Now' +
-  '<span class="htb-gap"></span>' +
-  'Book Appointments' +
-  '<span class="htb-gap"></span>' +
-  'Orders Medicines || Wellness products on Healthy Tantra app.' +
-  '<span class="htb-gap"></span>' +
-  'Download Healthy Tantra app';
+  var GAP = '<span class="htb-gap"></span>';
+  var CRACKER = '\uD83C\uDF86'; // fireworks emoji
+  var DIYA = '\uD83E\uDE94';    // diya lamp emoji
 
+  var text =
+    (festive
+          ? DIYA + ' ' + CRACKER + ' Happy Diwali, Healthy Diwali ' + CRACKER + ' ' + DIYA + GAP
+      : '') +
+    'Consult Doctor Now' + GAP +
+    'Book Appointments' + GAP +
+    'Order Medicines &amp; Wellness Products on the Healthy Tantra app' + GAP +
+    'Pay Only for the Minutes You Consult';
+   (festive
+          ? DIYA + ' Wishing You Very Very Happy Deepawali - Healthy Tantra! ' + CRACKER + ' ' + DIYA + GAP
+      : '') +
   function btn(href, label) {
     return '<a class="htb-btn" href="' + href + '" rel="noopener">' + label + '</a>';
   }
