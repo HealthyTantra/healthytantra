@@ -1,0 +1,6 @@
+# Old or mistyped URLs -> the correct page (permanent)
+/privacy                                        /privacy-policy                                  301
+/blog/privacy-and-confidentiality               /blog/safety-privacy-and-confidentiality         301
+/blog/daily-habits-for-mental-clarity           /blog/daily-habits-for-clarity                   301
+/blog/Yoga                                      /blog/yoga                                       301
+/index                                          /                                                301

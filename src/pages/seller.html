@@ -1,0 +1,67 @@
+---
+title: Sell on Healthy Tantra | Brand and Seller Partnership
+description: Brands, manufacturers and sellers: share your details and the Healthy Tantra team will connect with you about listing your products on our wellness marketplace.
+scripts: https://challenges.cloudflare.com/turnstile/v0/api.js, /js/forms.js
+---
+<section class="page-hero">
+  <div class="container">
+    <h1>Sell on Healthy Tantra</h1>
+    <p>Are you a brand, manufacturer or seller of healthcare and wellness products? Tell us about your business and our team will get in touch.</p>
+  </div>
+</section>
+
+<section class="contact-section container">
+  <div class="contact-grid">
+
+    <div class="contact-info">
+      <h2>Partner with us</h2>
+      <p>Healthy Tantra is a healthcare platform that connects people across India with verified doctors and a marketplace of medicines and wellness products, all in one app.</p>
+      <ul>
+        <li>Reach customers across India through the Healthy Tantra app</li>
+        <li>List your medicines, herbal and wellness products in our marketplace</li>
+        <li>Our team contacts you directly to explain the next steps</li>
+      </ul>
+      <div class="info-block">
+        <p><strong>Prefer email?</strong> Write to <a href="mailto:sellers@healthytantra.com">sellers@healthytantra.com</a></p>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Share your details</h2>
+      <form class="form-grid" data-api="/api/seller" data-success="Thank you. Our team will contact you shortly.">
+        <div>
+          <label for="s-name">Your name</label>
+          <input id="s-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+        </div>
+        <div>
+          <label for="s-mobile">Contact number</label>
+          <input id="s-mobile" name="mobile" type="tel" inputmode="tel" autocomplete="tel" placeholder="10-digit mobile number" maxlength="20" required>
+        </div>
+        <div>
+          <label for="s-brand">Brand or company name</label>
+          <input id="s-brand" name="brand" type="text" maxlength="150" required>
+        </div>
+        <div>
+          <label for="s-gst">GST number</label>
+          <input id="s-gst" name="gst" type="text" placeholder="15-character GSTIN" maxlength="15" minlength="15" pattern="[0-9]{2}[A-Za-z]{5}[0-9]{4}[A-Za-z][1-9A-Za-z]Z[0-9A-Za-z]" style="text-transform:uppercase" required>
+        </div>
+        <div>
+          <label for="s-email">Email <span class="hint">(optional)</span></label>
+          <input id="s-email" name="email" type="email" autocomplete="email" maxlength="254">
+        </div>
+        <div class="hp" aria-hidden="true">
+          <label for="s-website">Leave this field empty</label>
+          <input id="s-website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <label class="check">
+          <input type="checkbox" name="consent" value="yes" required>
+          <span>I agree that Healthy Tantra may contact me about listing my products. See our <a href="/privacy-policy">Privacy Policy</a>.</span>
+        </label>
+        <div class="cf-turnstile" data-sitekey="{{turnstile_site_key}}"></div>
+        <button type="submit">Submit</button>
+        <p class="form-status" role="status" aria-live="polite" hidden></p>
+      </form>
+    </div>
+
+  </div>
+</section>

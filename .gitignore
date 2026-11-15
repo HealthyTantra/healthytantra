@@ -1,0 +1,18 @@
+# build output and tooling
+dist/
+node_modules/
+.wrangler/
+
+# secrets: never commit these
+.env
+.env.*
+.dev.vars
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log
+*.bak
+
+# private project notes
+HTWebsiteClaude.md

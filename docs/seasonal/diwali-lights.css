@@ -1,0 +1,136 @@
+/* =========================================
+   HEALTHY TANTRA — DIWALI LIGHTS
+   ========================================= */
+
+.header {
+  position: fixed;
+  isolation: isolate;
+}
+
+.header .ht-diwali-lights {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  z-index: 3;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.header .ht-diwali-lights svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Connecting wire */
+.header .ht-diwali-lights .light-wire {
+  fill: none;
+  stroke: #D6B878;
+  stroke-width: 1.15;
+  stroke-linecap: round;
+  opacity: 0.9;
+}
+
+/* Bulb holders */
+.header .ht-diwali-lights .bulb-holder {
+  fill: #D6B878;
+}
+
+/* Warm white bulbs */
+.header .ht-diwali-lights .bulb-white {
+  fill: #FFF8E8;
+  filter:
+    drop-shadow(0 0 2px rgba(255, 248, 232, 0.95))
+    drop-shadow(0 0 5px rgba(255, 248, 232, 0.65))
+    drop-shadow(0 0 9px rgba(255, 248, 232, 0.3));
+  animation: ht-bulb-white 4s ease-in-out infinite;
+}
+
+/* Champagne gold bulbs */
+.header .ht-diwali-lights .bulb-gold {
+  fill: #F1C879;
+  filter:
+    drop-shadow(0 0 2px rgba(241, 200, 121, 1))
+    drop-shadow(0 0 6px rgba(241, 200, 121, 0.7))
+    drop-shadow(0 0 10px rgba(241, 200, 121, 0.35));
+  animation: ht-bulb-gold 4.8s ease-in-out infinite;
+}
+
+/* Classic alternating Diwali glow */
+
+.header .ht-diwali-lights .bulb-white {
+  fill: #FFF8E8;
+  animation: ht-classic-white 3.6s ease-in-out infinite;
+}
+
+.header .ht-diwali-lights .bulb-gold {
+  fill: #F1C879;
+  animation: ht-classic-gold 3.6s ease-in-out infinite;
+}
+
+/* Alternate neighbouring bulbs */
+.header .ht-diwali-lights .bulb-white:nth-of-type(4n + 1),
+.header .ht-diwali-lights .bulb-gold:nth-of-type(4n + 1) {
+  animation-delay: -1.8s;
+}
+
+@keyframes ht-classic-white {
+  0%, 100% {
+    opacity: 0.28;
+    filter: drop-shadow(0 0 1px rgba(255,248,232,.2));
+  }
+  50% {
+    opacity: 1;
+    filter:
+      drop-shadow(0 0 3px rgba(255,248,232,1))
+      drop-shadow(0 0 7px rgba(255,248,232,.85))
+      drop-shadow(0 0 13px rgba(255,248,232,.5));
+  }
+}
+
+@keyframes ht-classic-gold {
+  0%, 100% {
+    opacity: 0.28;
+    filter: drop-shadow(0 0 1px rgba(241,200,121,.2));
+  }
+  50% {
+    opacity: 1;
+    filter:
+      drop-shadow(0 0 3px rgba(241,200,121,1))
+      drop-shadow(0 0 8px rgba(241,200,121,.85))
+      drop-shadow(0 0 14px rgba(241,200,121,.5));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header .ht-diwali-lights .bulb-white,
+  .header .ht-diwali-lights .bulb-gold {
+    animation: none;
+    opacity: 1;
+  }
+}
+/* Mobile positioning */
+@media (max-width: 768px) {
+  .header .ht-diwali-lights {
+    height: 24px;
+  }
+
+  .header .ht-diwali-lights svg {
+    width: 150%;
+    max-width: none;
+    transform: translateX(-16.5%);
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .header .ht-diwali-lights .bulb-white,
+  .header .ht-diwali-lights .bulb-gold {
+    animation: none;
+    opacity: 1;
+  }
+}
+

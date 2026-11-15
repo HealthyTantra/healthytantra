@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <meta name="robots" content="{{robots}}">
+  <meta name="author" content="{{site_name}}">
+  <link rel="canonical" href="{{canonical}}">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+
+  <meta property="og:type" content="{{og_type}}">
+  <meta property="og:site_name" content="{{site_name}}">
+  <meta property="og:title" content="{{og_title}}">
+  <meta property="og:description" content="{{og_description}}">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="{{og_image}}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="google-play-app" content="app-id=com.healthytantra.app">
+  <meta name="apple-itunes-app" content="app-id=6799877739">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app-banner.js"></script>
+{{head_extra}}
+</head>
+<body class="{{body_class}}">
+
+{{> header}}
+
+<main id="main">
+{{content}}
+</main>
+
+{{> mobile-bar}}
+
+{{> footer}}
+
+<script src="/js/site.js" defer></script>
+{{page_scripts}}
+</body>
+</html>

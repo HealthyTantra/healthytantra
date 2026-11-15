@@ -1,0 +1,79 @@
+---
+title: Contact Healthy Tantra | Wellness Support & Consultation Assistance
+description: Contact Healthy Tantra for wellness support, consultation assistance, healthcare guidance and all kind of health related products and platform related queries.
+og_title: Contact Healthy Tantra
+og_description: Reach out to Healthy Tantra support and wellness care team.
+scripts: https://challenges.cloudflare.com/turnstile/v0/api.js, /js/forms.js
+---
+<section class="page-hero">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>We’re here to support your wellness journey. Reach out for any queries, assistance, or partnership opportunities.</p>
+  </div>
+</section>
+
+<section class="contact-section container">
+  <div class="contact-grid">
+
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>
+        For assistance related to consultations, wellness guidance, account support, or marketplace services, please contact our team.
+      </p>
+
+      <div class="info-block">
+        <p><strong>Email:</strong> <a href="mailto:care@healthytantra.com">care@healthytantra.com</a></p>
+        <p><strong>Support Hours:</strong> Monday – Saturday, 10:00 AM – 6:00 PM</p>
+        <p><strong>Response Time:</strong> Within 24 hours</p>
+      </div>
+
+      <div class="info-block">
+        <p><strong>Business Address:</strong><br>
+        Healthy Tantra <br>
+        Delhi 110012, India</p>
+      </div>
+
+      <p>
+        Our team actively monitors all messages and responds within 24 hours.
+      </p>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send a Message</h2>
+
+      <form class="form-grid" data-api="/api/contact" data-success="Thank you. We have received your message and will reply within 24 hours.">
+        <div>
+          <label for="c-name">Your name</label>
+          <input id="c-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+        </div>
+        <div>
+          <label for="c-email">Your email</label>
+          <input id="c-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+        </div>
+        <div>
+          <label for="c-subject">Subject <span class="hint">(optional)</span></label>
+          <input id="c-subject" name="subject" type="text" maxlength="150">
+        </div>
+        <div>
+          <label for="c-message">Your message</label>
+          <textarea id="c-message" name="message" rows="6" minlength="10" maxlength="3000" required></textarea>
+        </div>
+        <div class="hp" aria-hidden="true">
+          <label for="c-website">Leave this field empty</label>
+          <input id="c-website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <p class="notice">Please do not share medical details here. For consultations, use the Healthy Tantra app. By sending this message you agree to our <a href="/privacy-policy">Privacy Policy</a>.</p>
+        <div class="cf-turnstile" data-sitekey="{{turnstile_site_key}}"></div>
+        <button type="submit">Send Message</button>
+        <p class="form-status" role="status" aria-live="polite" hidden></p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact-note container">
+  <p>
+    <strong>Note:</strong> Healthy Tantra provides wellness guidance and lifestyle support. It is not intended for emergency medical situations. For urgent medical needs, please contact your nearest healthcare provider.
+  </p>
+</section>
