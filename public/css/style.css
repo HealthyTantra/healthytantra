@@ -2983,3 +2983,37 @@ html.ht-banner-on {
 .footer-specialties { margin-bottom: 14px; font-size: 14px; gap: 10px 18px; }
 .footer-specialties span { color: rgba(255,255,255,0.55); }
 .article-page > .container { width: 100%; max-width: none; padding-inline: 0; margin: 0; }
+/* Mobile hero: slider grows with content instead of clipping it */
+@media (max-width: 768px) {
+  .hero-slider {
+    display: grid;
+    min-height: 0;
+  }
+
+  .hero-slider .slide {
+    position: relative;
+    inset: auto;
+    grid-area: 1 / 1;          /* all slides share one cell: height = tallest slide, no jump */
+    display: flex;
+    flex-direction: column;
+    min-height: 88vh;
+  }
+
+  .hero-slider .overlay {
+    flex: 1 1 auto;
+    height: auto;
+    padding: 28px 20px 56px;   /* wider text, room for the dots */
+  }
+
+  .overlay h1 { font-size: clamp(28px, 7.5vw, 38px); }
+  .overlay h2.hero-title { font-size: clamp(26px, 7vw, 34px); }
+
+  .trust-bar { gap: 8px; font-size: 12px; }
+  .trust-bar span { padding: 6px 10px; }
+}
+.what-is { padding: 56px 0 8px; background: #fff; }
+.what-is .section-head.center { margin-bottom: 0; }
+.what-is .section-head h2 { font-size: clamp(26px, 3.2vw, 36px); }
+.what-is .section-head p { max-width: 720px; margin: 14px auto 0; font-size: 17px; line-height: 1.8; color: #4b5563; }
+.what-is .more-link { color: var(--primary); font-weight: 600; text-decoration: none; }
+.what-is .more-link:hover { text-decoration: underline; }
