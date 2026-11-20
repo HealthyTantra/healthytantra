@@ -3024,3 +3024,17 @@ html.ht-banner-on {
   .what-is { padding: 44px 0 20px; }
   .what-is .section-head p { font-size: 16px; }
 }
+@media (max-width: 768px) {
+  .hero-slider .trust-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* 2 + 2 */
+    gap: 6px;
+    margin-top: 14px;
+  }
+  .hero-slider .trust-bar span {
+    padding: 6px 4px;
+    font-size: 11px;
+    line-height: 1.25;
+    text-align: center;
+  }
+}
